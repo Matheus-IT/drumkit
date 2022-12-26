@@ -81,4 +81,9 @@ button {
   text-align: center;
   margin: 10px;
   background-color: white;
+  cursor: pointer;
+}
+
+.drum:hover {
+    scale: 1.01;
 }
