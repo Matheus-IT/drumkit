@@ -87,3 +87,7 @@ button {
 .drum:hover {
     scale: 1.01;
 }
+
+.drum-hover {
+    scale: 1.01;
+}

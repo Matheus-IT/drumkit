@@ -23,8 +23,15 @@ drumSet.forEach(e => {
 });
 
 document.addEventListener('keypress', function(event) {
+    const drumButton = Array.from(drumSet).find(e => e.innerHTML === event.key) as HTMLButtonElement;
+    animateWhenClicked(drumButton);
     const audioElement = sounds[event.key]();
     audioElement.play();
 });
+
+function animateWhenClicked(drumButton: HTMLButtonElement) {
+    drumButton.classList.add('drum-hover');
+    setTimeout(() => drumButton.classList.remove('drum-hover'), 100);
+}
 
 export {}; // needed to make it a module
